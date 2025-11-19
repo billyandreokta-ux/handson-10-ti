@@ -1,4 +1,5 @@
-package latihan1_srp.good;
+package latihan1.good;
+
 
 // TANGGUNG JAWAB 4: Kirim SMS
 public class SmsSender {
@@ -8,10 +9,10 @@ public class SmsSender {
     // 1. Print "[SmsSender] Sending SMS to: ..."
     // 2. Print "[SmsSender] Content: ..."
 
-    /*
+
     public void send(String recipient, String message) {
         System.out.println("[SmsSender] Sending SMS to: " + recipient);
         System.out.println("[SmsSender] Content: " + message);
     }
-    */
+
 }

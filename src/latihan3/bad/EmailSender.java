@@ -1,6 +1,6 @@
-package latihan3_lsp.bad;
+package latihan3.bad;
 
-// Implementation yang BENAR - follows parent contract
+// Implementation yang SALAH - melanggar LSP
 public class EmailSender extends NotificationSender {
 
     public EmailSender() {
@@ -9,8 +9,12 @@ public class EmailSender extends NotificationSender {
 
     @Override
     public boolean send(String recipient, String message) {
-        // Implementasi yang proper - benar-benar mengirim
-        System.out.println("✓ Notification sent via EMAIL to " + recipient);
-        return true;
+        // Melanggar kontrak:
+        // Parent class mengharuskan: return true jika sukses,
+        // validasi recipient/message, dan print pesan.
+        // Tetapi di sini justru diabaikan.
+
+        System.out.println("EmailSender ERROR: Can't send email for some reason.");
+        return false; // selalu false → melanggar kontrak
     }
 }

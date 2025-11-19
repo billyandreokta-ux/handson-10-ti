@@ -1,4 +1,4 @@
-package latihan2_ocp.bad;
+package latihan2.bad;
 
 // Class ini MELANGGAR OCP karena setiap channel baru harus modify code ini
 public class NotificationService {

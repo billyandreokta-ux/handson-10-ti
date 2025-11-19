@@ -1,4 +1,4 @@
-package latihan2_ocp.good;
+package latihan2.good;
 
 // Interface untuk abstraksi notification sender
 // Dengan interface, kita bisa extend dengan implementation baru
@@ -10,8 +10,6 @@ public interface NotificationSender {
     // 1. Method send(String recipient, String message)
     // 2. Method getType() yang return String (untuk identifikasi channel)
 
-    /*
     void send(String recipient, String message);
     String getType();
-    */
 }

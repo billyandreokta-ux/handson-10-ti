@@ -1,8 +1,11 @@
-package latihan2_ocp;
+package latihan2;
+import latihan2.good.*;
+import java.util.*;
 
-import latihan2_ocp.bad.NotificationService as BadNotificationService;
-// import latihan2_ocp.good.*; // Uncomment setelah refactoring selesai
-// import java.util.*;
+
+import latihan2.good.NotificationService;
+
+
 
 public class OCPPractice {
     public static void main(String[] args) {
@@ -22,16 +25,18 @@ public class OCPPractice {
         // ===== PART 1: BAD PRACTICE - Melanggar OCP =====
         System.out.println("=== BAD PRACTICE: Melanggar OCP ===\n");
 
-        BadNotificationService badService = new BadNotificationService();
+        latihan2.bad.NotificationService badService =
+                new latihan2.bad.NotificationService();
+
         badService.sendNotification("Hello", "EMAIL", "user@example.com");
         badService.sendNotification("Hello", "SMS", "081234567890");
 
         System.out.println("\n--- Analisis Masalah ---");
         System.out.println("Bagaimana kalau kita ingin menambah channel baru (WhatsApp)?");
-        System.out.println("❌ Harus modify method sendNotification()");
-        System.out.println("❌ Harus tambah else if baru");
-        System.out.println("❌ Risk merusak existing functionality");
-        System.out.println("❌ Setiap channel baru = modify existing code");
+        System.out.println("Harus modify method sendNotification()");
+        System.out.println("Harus tambah else if baru");
+        System.out.println("Risk merusak existing functionality");
+        System.out.println("Setiap channel baru = modify existing code");
         System.out.println("\nIni MELANGGAR OCP: tidak bisa extend tanpa modify!");
 
         System.out.println("\n" + "=".repeat(70));
@@ -66,8 +71,9 @@ public class OCPPractice {
          * 3. Setelah selesai, uncomment code di bawah untuk testing
          */
 
-        // UNCOMMENT CODE DI BAWAH SETELAH REFACTORING SELESAI
-        /*
+
+
+
         // Setup senders
         List<NotificationSender> senders = new ArrayList<>();
         senders.add(new EmailSender());
@@ -86,7 +92,9 @@ public class OCPPractice {
         System.out.println("  → Buat class baru WhatsAppSender");
         System.out.println("  → Add ke list senders");
         System.out.println("  → ZERO modification ke NotificationService");
-        */
+
+
+
 
         /*
          * EKSPEKTASI OUTPUT:
@@ -100,10 +108,10 @@ public class OCPPractice {
          *
          * --- Analisis Masalah ---
          * Bagaimana kalau kita ingin menambah channel baru (WhatsApp)?
-         * ❌ Harus modify method sendNotification()
-         * ❌ Harus tambah else if baru
-         * ❌ Risk merusak existing functionality
-         * ❌ Setiap channel baru = modify existing code
+         * Harus modify method sendNotification()
+         * Harus tambah else if baru
+         * Risk merusak existing functionality
+         * Setiap channel baru = modify existing code
          *
          * Ini MELANGGAR OCP: tidak bisa extend tanpa modify!
          *

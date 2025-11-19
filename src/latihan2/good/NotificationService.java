@@ -1,4 +1,4 @@
-package latihan2_ocp.good;
+package latihan2.good;
 
 import java.util.List;
 
@@ -12,7 +12,6 @@ public class NotificationService {
     // 2. Method sendNotification loop through semua senders
     // 3. Panggil send() untuk setiap sender
 
-    /*
     private List<NotificationSender> senders;
 
     public NotificationService(List<NotificationSender> senders) {
@@ -25,5 +24,4 @@ public class NotificationService {
             sender.send(recipient, message);
         }
     }
-    */
 }

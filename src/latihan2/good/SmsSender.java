@@ -1,4 +1,4 @@
-package latihan2_ocp.good;
+package latihan2.good;
 
 // Implementation untuk SMS channel
 public class SmsSender implements NotificationSender {
@@ -9,7 +9,6 @@ public class SmsSender implements NotificationSender {
     // 2. Print "[SMS] Sending to: ... | Content: ..."
     // 3. Implement method getType() return "SMS"
 
-    /*
     @Override
     public void send(String recipient, String message) {
         System.out.println("[SMS] Sending to: " + recipient + " | Content: " + message);
@@ -19,5 +18,4 @@ public class SmsSender implements NotificationSender {
     public String getType() {
         return "SMS";
     }
-    */
 }

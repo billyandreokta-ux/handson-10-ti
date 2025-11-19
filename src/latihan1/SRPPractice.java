@@ -1,6 +1,8 @@
-package latihan1_srp;
+package latihan1;
 
-import latihan1_srp.bad.NotificationService as BadNotificationService;
+// Perbaikan import — Java tidak punya fitur "as"
+import latihan1.bad.NotificationService;  // BAD version
+import latihan1.good.*;
 // import latihan1_srp.good.*; // Uncomment setelah refactoring selesai
 
 public class SRPPractice {
@@ -21,7 +23,7 @@ public class SRPPractice {
         // ===== PART 1: BAD PRACTICE - Melanggar SRP =====
         System.out.println("=== BAD PRACTICE: Melanggar SRP ===\n");
 
-        BadNotificationService badService = new BadNotificationService();
+        NotificationService badService = new NotificationService();
         badService.sendNotification("Hello World", "EMAIL", "user@example.com");
 
         System.out.println("\n--- Analisis Masalah ---");
@@ -46,38 +48,15 @@ public class SRPPractice {
          * 2. Lengkapi class-class berikut dengan uncomment dan isi implementation:
          *
          *    a. MessageValidator.java
-         *       - Tanggung jawab: Validasi message (null check, empty check)
-         *       - Method: validate(String message)
-         *
          *    b. MessageFormatter.java
-         *       - Tanggung jawab: Format message dengan timestamp
-         *       - Method: format(String message)
-         *
          *    c. EmailSender.java
-         *       - Tanggung jawab: Kirim email saja
-         *       - Method: send(String recipient, String message)
-         *
          *    d. SmsSender.java
-         *       - Tanggung jawab: Kirim SMS saja
-         *       - Method: send(String recipient, String message)
-         *
          *    e. NotificationLogger.java
-         *       - Tanggung jawab: Logging saja
-         *       - Method: log(String type, String recipient)
-         *
          *    f. NotificationRepository.java
-         *       - Tanggung jawab: Save ke database saja
-         *       - Method: save(String type, String recipient, String message)
-         *
          *    g. NotificationService.java (Orchestrator)
-         *       - Tanggung jawab: Koordinasi semua class di atas
-         *       - Method: sendNotification(String message, String type, String recipient)
-         *
-         * 3. Setelah selesai, uncomment code di bawah untuk testing
          */
 
         // UNCOMMENT CODE DI BAWAH SETELAH REFACTORING SELESAI
-        /*
         MessageValidator validator = new MessageValidator();
         MessageFormatter formatter = new MessageFormatter();
         EmailSender emailSender = new EmailSender();
@@ -85,9 +64,16 @@ public class SRPPractice {
         NotificationLogger logger = new NotificationLogger();
         NotificationRepository repository = new NotificationRepository();
 
-        NotificationService goodService = new NotificationService(
-            validator, formatter, emailSender, smsSender, logger, repository
-        );
+        // Karena ada dua NotificationService, kita spesifikasikan yang "good"
+        latihan1.good.NotificationService goodService =
+                new latihan1.good.NotificationService(
+                        validator,
+                        formatter,
+                        emailSender,
+                        smsSender,
+                        logger,
+                        repository
+                );
 
         goodService.sendNotification("Hello World", "EMAIL", "user@example.com");
 
@@ -97,7 +83,9 @@ public class SRPPractice {
         System.out.println("✓ Easy to maintain - Perubahan di satu area tidak affect yang lain");
         System.out.println("✓ Reusable - MessageFormatter bisa dipakai di tempat lain");
         System.out.println("✓ Low coupling - Komponen tidak saling bergantung berlebihan");
-        */
+
+        /*
+         * EKSPEKTASI OUTPUT:
 
         /*
          * EKSPEKTASI OUTPUT:

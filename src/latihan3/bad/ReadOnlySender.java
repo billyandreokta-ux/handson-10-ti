@@ -1,4 +1,4 @@
-package latihan3_lsp.bad;
+package latihan3.bad;
 
 // Implementation yang MELANGGAR LSP
 // Class ini throw exception padahal parent expect send() to work

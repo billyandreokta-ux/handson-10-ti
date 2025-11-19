@@ -1,6 +1,25 @@
-package latihan1_srp.bad;
+package latihan1.bad;
 
-// Class ini MELANGGAR SRP karena memiliki terlalu banyak tanggung jawab
+/**
+ * NotificationService (BAD PRACTICE)
+ * Class ini MELANGGAR SRP karena memiliki terlalu banyak tanggung jawab
+ *
+ * Tanggung jawab yang tercampur dalam 1 class:
+ * 1. Validasi message
+ * 2. Format message
+ * 3. Kirim EMAIL
+ * 4. Kirim SMS
+ * 5. Logging
+ * 6. Save to database
+ *
+ * Alasan untuk berubah (reasons to change): 6 alasan! ❌
+ * - Jika validation logic berubah
+ * - Jika format message berubah
+ * - Jika EMAIL sending berubah
+ * - Jika SMS sending berubah
+ * - Jika logging requirement berubah
+ * - Jika database provider berubah
+ */
 public class NotificationService {
 
     public void sendNotification(String message, String type, String recipient) {

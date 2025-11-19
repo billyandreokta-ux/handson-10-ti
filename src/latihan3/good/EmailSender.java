@@ -1,4 +1,4 @@
-package latihan3_lsp.good;
+package latihan3.good;
 
 // Implementation yang FOLLOWS contract
 public class EmailSender extends NotificationSender {
@@ -11,7 +11,6 @@ public class EmailSender extends NotificationSender {
     //    - Print "[EmailSender] ✓ Notification sent to: ..."
     //    - Return true
 
-    /*
     public EmailSender() {
         super("EMAIL");
     }
@@ -24,5 +23,4 @@ public class EmailSender extends NotificationSender {
         System.out.println("[EmailSender] ✓ Notification sent to: " + recipient);
         return true;
     }
-    */
 }

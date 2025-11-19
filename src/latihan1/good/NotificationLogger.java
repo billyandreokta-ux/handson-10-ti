@@ -1,4 +1,4 @@
-package latihan1_srp.good;
+package latihan1.good;
 
 // TANGGUNG JAWAB 5: Logging
 public class NotificationLogger {
@@ -7,9 +7,9 @@ public class NotificationLogger {
     // Method ini harus:
     // 1. Print "[Logger] LOG: Notification sent - Type: ..."
 
-    /*
+
     public void log(String type, String recipient) {
         System.out.println("[Logger] LOG: Notification sent - Type: " + type);
     }
-    */
+
 }

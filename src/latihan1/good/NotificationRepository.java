@@ -1,4 +1,4 @@
-package latihan1_srp.good;
+package latihan1.good;
 
 // TANGGUNG JAWAB 6: Database operations
 public class NotificationRepository {
@@ -7,9 +7,9 @@ public class NotificationRepository {
     // Method ini harus:
     // 1. Print "[Repository] DB: Saving notification record..."
 
-    /*
+
     public void save(String type, String recipient, String message) {
         System.out.println("[Repository] DB: Saving notification record...");
     }
-    */
+
 }

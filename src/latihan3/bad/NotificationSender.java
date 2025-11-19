@@ -1,4 +1,4 @@
-package latihan3_lsp.bad;
+package latihan3.bad;
 
 // Parent class untuk semua notification sender
 // Masalah: Kontrak tidak jelas, memungkinkan subclass melanggar LSP

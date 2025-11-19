@@ -1,4 +1,4 @@
-package latihan3_lsp.good;
+package latihan3.good;
 
 // Parent class dengan CLEAR CONTRACT
 // Semua subclass HARUS follow contract ini
@@ -24,11 +24,10 @@ public abstract class NotificationSender {
      *
      * Contract ini HARUS diikuti oleh semua subclass!
      */
-    /*
+
     public abstract boolean send(String recipient, String message);
 
     public String getType() {
         return senderName;
     }
-    */
 }

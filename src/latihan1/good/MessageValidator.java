@@ -1,4 +1,4 @@
-package latihan1_srp.good;
+package latihan1.good;
 
 // TANGGUNG JAWAB 1: Validasi message
 public class MessageValidator {
@@ -10,12 +10,12 @@ public class MessageValidator {
     // 3. Throw IllegalArgumentException jika tidak valid
     // 4. Print "[Validator] Message validated successfully" jika valid
 
-    /*
+
     public void validate(String message) {
         if (message == null || message.isEmpty()) {
             throw new IllegalArgumentException("Message cannot be empty");
         }
         System.out.println("[Validator] Message validated successfully");
     }
-    */
+
 }
