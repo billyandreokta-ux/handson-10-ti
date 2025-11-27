@@ -82,7 +82,7 @@ public class LSPPractice {
 
     // Helper method untuk demonstrasi polymorphic code
     private static void processNotification(NotificationSender sender,
-                                            String recipient, String message) {
+                                          String recipient, String message) {
         boolean success = sender.send(recipient, message);
         if (success) {
             System.out.println("✓ Notification sent successfully");
